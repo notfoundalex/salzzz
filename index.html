@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#121212" />
+  <meta name="theme-color" content="#0c0c0c" />
   <meta name="description" content="salzzz — early access drops." />
   <title>salzzz</title>
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
@@ -12,73 +12,109 @@
 <body>
   <a class="skip" href="#main">Ir directamente al contenido</a>
 
-  <div class="desktop">
-    <header class="header">
-      <a class="logo" href="/" aria-label="salzzz">
-        <img src="assets/logo.svg" alt="salzzz" width="42" height="42" />
-      </a>
-      <nav class="header-nav" aria-label="Main">
-        <button class="lock-toggle" type="button" aria-label="Open password form" data-open-password>
-          <img src="assets/icons/lock-dark.svg" alt="" width="11" height="11" />
-        </button>
-        <a href="#membresie">Membresie</a>
-        <a href="#archive">Archive</a>
-      </nav>
-    </header>
+  <div class="stage" data-stage>
+    <div class="fx" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="orb orb-c"></div>
+      <div class="grid-floor"></div>
+      <canvas class="particles" data-particles width="1" height="1"></canvas>
+    </div>
 
-    <main id="main" class="hero">
-      <h1 class="headline">[SOLD OUT. NEW COLLECTION SOON.]</h1>
+    <div class="desktop" data-tilt-scene>
+      <header class="header">
+        <a class="logo" href="/" aria-label="salzzz" data-float="slow">
+          <span class="logo-glow"></span>
+          <img src="assets/logo.svg" alt="salzzz" width="42" height="42" />
+        </a>
+        <nav class="header-nav" aria-label="Main">
+          <button class="lock-toggle" type="button" aria-label="Open password form" data-open-password>
+            <img src="assets/icons/lock-dark.svg" alt="" width="11" height="11" />
+          </button>
+          <a href="#membresie">Membresie</a>
+          <a href="#archive">Archive</a>
+        </nav>
+      </header>
 
-      <form class="newsletter" id="newsletter-form" novalidate>
-        <label class="sr-only" for="mail">Email</label>
-        <input
-          id="mail"
-          class="email"
-          type="email"
-          name="email"
-          placeholder="[MAIL]"
-          autocomplete="email"
-          required
-        />
-        <button class="submit" type="submit">Suscribe</button>
-      </form>
+      <main id="main" class="hero" data-tilt-card>
+        <div class="hero-depth">
+          <h1 class="headline" data-split>
+            <span>[SOLD OUT. NEW COLLECTION SOON.]</span>
+          </h1>
 
-      <div class="password-row">
-        <button class="password-link" type="button" data-open-password>
-          <img src="assets/icons/lock-white.svg" alt="" width="14" height="14" />
-          <span>Password</span>
-        </button>
-      </div>
-    </main>
+          <form class="newsletter" id="newsletter-form" novalidate>
+            <label class="sr-only" for="mail">Email</label>
+            <input
+              id="mail"
+              class="email"
+              type="email"
+              name="email"
+              placeholder="[MAIL]"
+              autocomplete="email"
+              required
+            />
+            <button class="submit" type="submit" data-magnetic>
+              <span class="submit-shine"></span>
+              <span class="submit-label">Suscribe</span>
+            </button>
+          </form>
 
-    <section class="files" aria-label="Shortcuts">
-      <p class="access-badge">Get <u>24h early access</u>!!!</p>
+          <div class="password-row">
+            <button class="password-link" type="button" data-open-password>
+              <img src="assets/icons/lock-white.svg" alt="" width="14" height="14" />
+              <span>Password</span>
+            </button>
+          </div>
+        </div>
+      </main>
 
-      <a class="file" href="#archive" id="archive">
-        <img class="file-icon" src="assets/icons/zip.svg" alt="" />
-        <span class="file-label">archive.zip</span>
-      </a>
-      <a class="file" href="#membresie" id="membresie">
-        <img class="file-icon file-icon--card" src="assets/icons/membresie.svg" alt="" />
-        <span class="file-label">membresie.txt</span>
-      </a>
-      <a class="file" href="https://wa.me/" target="_blank" rel="noopener noreferrer">
-        <img class="file-icon" src="assets/icons/whatsapp.svg" alt="" />
-        <span class="file-label">whatsapp.txt</span>
-      </a>
-      <a class="file" href="#newsletter">
-        <img class="file-icon" src="assets/icons/mail.svg" alt="" />
-        <span class="file-label">newsletter.txt</span>
-      </a>
-      <a class="file" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
-        <img class="file-icon" src="assets/icons/instagram.svg" alt="" />
-        <span class="file-label">@salzzz</span>
-      </a>
-      <div class="file is-disabled" aria-disabled="true">
-        <img class="file-icon file-icon--muted" src="assets/icons/zip.svg" alt="" />
-        <span class="file-label">FW26-lookbook.zip</span>
-      </div>
-    </section>
+      <section class="files" aria-label="Shortcuts" data-dock>
+        <p class="access-badge" data-float="badge">Get <u>24h early access</u>!!!</p>
+
+        <a class="file" href="#archive" id="archive" data-file style="--i:0">
+          <span class="file-shadow"></span>
+          <span class="file-face">
+            <img class="file-icon" src="assets/icons/zip.svg" alt="" />
+          </span>
+          <span class="file-label">archive.zip</span>
+        </a>
+        <a class="file" href="#membresie" id="membresie" data-file style="--i:1">
+          <span class="file-shadow"></span>
+          <span class="file-face">
+            <img class="file-icon file-icon--card" src="assets/icons/membresie.svg" alt="" />
+          </span>
+          <span class="file-label">membresie.txt</span>
+        </a>
+        <a class="file" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-file style="--i:2">
+          <span class="file-shadow"></span>
+          <span class="file-face">
+            <img class="file-icon" src="assets/icons/whatsapp.svg" alt="" />
+          </span>
+          <span class="file-label">whatsapp.txt</span>
+        </a>
+        <a class="file" href="#newsletter" data-file style="--i:3">
+          <span class="file-shadow"></span>
+          <span class="file-face">
+            <img class="file-icon" src="assets/icons/mail.svg" alt="" />
+          </span>
+          <span class="file-label">newsletter.txt</span>
+        </a>
+        <a class="file" href="https://instagram.com/" target="_blank" rel="noopener noreferrer" data-file style="--i:4">
+          <span class="file-shadow"></span>
+          <span class="file-face">
+            <img class="file-icon" src="assets/icons/instagram.svg" alt="" />
+          </span>
+          <span class="file-label">@salzzz</span>
+        </a>
+        <div class="file is-disabled" aria-disabled="true" data-file style="--i:5">
+          <span class="file-shadow"></span>
+          <span class="file-face">
+            <img class="file-icon file-icon--muted" src="assets/icons/zip.svg" alt="" />
+          </span>
+          <span class="file-label">FW26-lookbook.zip</span>
+        </div>
+      </section>
+    </div>
   </div>
 
   <footer class="footer" id="newsletter">
@@ -142,7 +178,10 @@
       <p>Authorized users only. Please identify yourself.</p>
       <label class="sr-only" for="site-password">Password</label>
       <input id="site-password" type="password" placeholder="[PASSWORD]" autocomplete="current-password" />
-      <button class="submit modal-submit" type="submit">Enter</button>
+      <button class="submit modal-submit" type="submit">
+        <span class="submit-shine"></span>
+        <span class="submit-label">Enter</span>
+      </button>
       <button class="modal-close" type="button" data-close-password>Close</button>
     </form>
   </dialog>
