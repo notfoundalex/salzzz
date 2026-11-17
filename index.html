@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#121212" />
+  <meta name="description" content="salzzz — early access drops." />
+  <title>salzzz</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Ir directamente al contenido</a>
+
+  <div class="desktop">
+    <header class="header">
+      <a class="logo" href="/" aria-label="salzzz">
+        <img src="assets/logo.svg" alt="salzzz" width="42" height="42" />
+      </a>
+      <nav class="header-nav" aria-label="Main">
+        <button class="lock-toggle" type="button" aria-label="Open password form" data-open-password>
+          <img src="assets/icons/lock-dark.svg" alt="" width="11" height="11" />
+        </button>
+        <a href="#membresie">Membresie</a>
+        <a href="#archive">Archive</a>
+      </nav>
+    </header>
+
+    <main id="main" class="hero">
+      <h1 class="headline">[SOLD OUT. NEW COLLECTION SOON.]</h1>
+
+      <form class="newsletter" id="newsletter-form" novalidate>
+        <label class="sr-only" for="mail">Email</label>
+        <input
+          id="mail"
+          class="email"
+          type="email"
+          name="email"
+          placeholder="[MAIL]"
+          autocomplete="email"
+          required
+        />
+        <button class="submit" type="submit">Suscribe</button>
+      </form>
+
+      <div class="password-row">
+        <button class="password-link" type="button" data-open-password>
+          <img src="assets/icons/lock-white.svg" alt="" width="14" height="14" />
+          <span>Password</span>
+        </button>
+      </div>
+    </main>
+
+    <section class="files" aria-label="Shortcuts">
+      <p class="access-badge">Get <u>24h early access</u>!!!</p>
+
+      <a class="file" href="#archive" id="archive">
+        <img class="file-icon" src="assets/icons/zip.svg" alt="" />
+        <span class="file-label">archive.zip</span>
+      </a>
+      <a class="file" href="#membresie" id="membresie">
+        <img class="file-icon file-icon--card" src="assets/icons/membresie.svg" alt="" />
+        <span class="file-label">membresie.txt</span>
+      </a>
+      <a class="file" href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+        <img class="file-icon" src="assets/icons/whatsapp.svg" alt="" />
+        <span class="file-label">whatsapp.txt</span>
+      </a>
+      <a class="file" href="#newsletter">
+        <img class="file-icon" src="assets/icons/mail.svg" alt="" />
+        <span class="file-label">newsletter.txt</span>
+      </a>
+      <a class="file" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+        <img class="file-icon" src="assets/icons/instagram.svg" alt="" />
+        <span class="file-label">@salzzz</span>
+      </a>
+      <div class="file is-disabled" aria-disabled="true">
+        <img class="file-icon file-icon--muted" src="assets/icons/zip.svg" alt="" />
+        <span class="file-label">FW26-lookbook.zip</span>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer" id="newsletter">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <nav aria-label="Help">
+          <h2>[Help]</h2>
+          <ul>
+            <li><a href="#faqs">Faqs</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#size">Size Charts</a></li>
+            <li><a href="#membresie">Membresie</a></li>
+            <li><a href="#returns">Returns &amp; Exchanges</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Legal">
+          <h2>[Legal]</h2>
+          <ul>
+            <li><a href="#legal">Legal Notice</a></li>
+            <li><a href="#cookies">Cookies Policy</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#purchase">Purchase Conditions</a></li>
+            <li>
+              <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">
+                EU Dispute Platform
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button class="country" type="button" data-country>[Select country]</button>
+      </div>
+
+      <section class="footer-newsletter" aria-labelledby="footer-news-title">
+        <h2 id="footer-news-title">[Newsletter]</h2>
+        <p class="footer-copy">F*ck spam, just early access</p>
+        <form class="footer-form" id="footer-form" novalidate>
+          <label class="sr-only" for="footer-mail">Email</label>
+          <input
+            id="footer-mail"
+            class="footer-input"
+            type="email"
+            name="email"
+            placeholder="[Mail]"
+            autocomplete="email"
+            required
+          />
+          <button class="footer-button" type="submit">Sign Up</button>
+        </form>
+        <div class="copyright">
+          <p>© 2026, salzzz</p>
+          <p>[Early Access Only]</p>
+        </div>
+      </section>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="password-modal">
+    <div class="modal-bar"></div>
+    <form method="dialog" class="modal-body">
+      <h2>salzzz Membresie</h2>
+      <p>Authorized users only. Please identify yourself.</p>
+      <label class="sr-only" for="site-password">Password</label>
+      <input id="site-password" type="password" placeholder="[PASSWORD]" autocomplete="current-password" />
+      <button class="submit modal-submit" type="submit">Enter</button>
+      <button class="modal-close" type="button" data-close-password>Close</button>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" hidden role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
