@@ -19,26 +19,32 @@ npx --yes serve .
 
 Luego abre la URL que te muestre la terminal (normalmente `http://localhost:3000`).
 
+## Animaciones
+
+La landing usa profundidad 3D: parallax al mover el ratón, iconos flotantes, partículas, orbes, grid de suelo en perspectiva y botón magnético. Respeta `prefers-reduced-motion`.
+
 ## Guardar en GitHub (Mac + remoto)
 
-1. En Cursor / terminal, autentica GitHub:
+El repo local ya tiene commits en `main`. Para subirlo a `notfoundalex`:
+
+1. Autentica GitHub (en Cursor acepta Connect GitHub, o en terminal):
    ```bash
    gh auth login
    ```
-2. Crea el repo y súbelo:
+2. Desde esta carpeta:
    ```bash
-   git init
-   git add .
-   git commit -m "Initial salzzz landing"
    gh repo create notfoundalex/salzzz --public --source=. --remote=origin --push
+   ```
+   Si el repo ya existe vacío:
+   ```bash
+   git remote add origin https://github.com/notfoundalex/salzzz.git
+   git push -u origin main
    ```
 3. En tu Mac:
    ```bash
    git clone https://github.com/notfoundalex/salzzz.git
    cd salzzz
    ```
-
-Así el mismo proyecto vive en local (Windows/Mac) y en GitHub, sin perder el trabajo.
 
 ## Estructura
 
